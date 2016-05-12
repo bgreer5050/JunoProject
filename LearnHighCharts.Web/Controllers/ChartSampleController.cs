@@ -1,5 +1,6 @@
 ﻿using DotNet.Highcharts;
 using DotNet.Highcharts.Enums;
+using DotNet.Highcharts.Helpers;
 using DotNet.Highcharts.Options;
 using System;
 using System.Collections.Generic;
@@ -33,29 +34,42 @@ namespace LearnHighCharts.Web.Controllers
             //Instantiate a HighChart object
             var chart = new Highcharts("chart")
                 //define chart type
-                .InitChart(new Chart { DefaultSeriesType = ChartTypes.Line})
+                .InitChart(new Chart { DefaultSeriesType = ChartTypes.Line })
                //overall Title of Chart
-               .SetTitle(new Title {  Text="Incoming Transactions per hour"})
+               .SetTitle(new Title { Text = "Incoming Transactions per hour" })
                //small title below main title
-               .SetSubtitle(new Subtitle {  Text="Accounting"})
+               .SetSubtitle(new Subtitle { Text = "Accounting" })
                //load x values
                .SetXAxis(new XAxis { Categories = xDataMonths })
                //set Y Title
                .SetYAxis(new YAxis { Title = new YAxisTitle { Text = "Number of Transactions" } })
-               .SetTooltip(new Tooltip {  Enabled=true,
-               Formatter = @"function(){return '<b>' + this.series.name + '</b><br/>' + this.x +': '+ this.y; }"
+               .SetTooltip(new Tooltip
+               {
+                   Enabled = true,
+                   Formatter = @"function(){return '<b>' + this.series.name + '</b><br/>' + this.x +': '+ this.y; }"
                })
-               .SetPlotOptions(new PlotOptions {
-                   Line =new PlotOptionsLine {
-                       DataLabels = new PlotOptionsLineDataLabels {
-                           Enabled =true
+               .SetPlotOptions(new PlotOptions
+               {
+                   Line = new PlotOptionsLine
+                   {
+                       DataLabels = new PlotOptionsLineDataLabels
+                       {
+                           Enabled = true
                        },
-                       EnableMouseTracking =false
+                       EnableMouseTracking = false
                    }
                })
+               .SetSeries(new[]
+               {
+                   new Series { Name="Hour",Data = new Data(yDataCounts) },
+                   //you can add more y data to create a second line
+                   // new Series{Name="Other Name",Data= new Data(otherData)}
+
+               }
+               );
 
 
-            return View();
+            return View(chart);
         }
     }
 }
