@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DotNet.Highcharts;
+using DotNet.Highcharts.Enums;
+using DotNet.Highcharts.Options;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -27,7 +30,11 @@ namespace LearnHighCharts.Web.Controllers
             var xDataMonths = transactions.Select(i => i.MonthName).ToArray();
             var yDataCounts = transactions.Select(i => new object[] { i.Count }).ToArray();
 
-            //var chart = new HighCharts
+            //Instantiate a HighChart object
+            var chart = new Highcharts("chart")
+                //define chart type
+                .InitChart(new Chart { DefaultSeriesType = ChartTypes.Line})
+               
 
             return View();
         }
