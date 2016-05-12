@@ -39,7 +39,8 @@ namespace LearnHighCharts.Web.Controllers
                //small title below main title
                .SetSubtitle(new Title {  Text="Accounting"})
                //load x values
-               .SetXAxis(new XAxis {  Title = new XAxisTitle {  Text="Number of Transactions"} })
+               .SetXAxis(new XAxis { Categories = xDataMonths })
+
 
             return View();
         }
