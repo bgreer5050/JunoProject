@@ -36,6 +36,8 @@ namespace LearnHighCharts.Web.Controllers
                 .InitChart(new Chart { DefaultSeriesType = ChartTypes.Line})
                //overall Title of Chart
                .SetTitle(new Title {  Text="Incoming Transactions per hour"})
+               //small title below main title
+               .SetSubtitle(new Title {  Text="Accounting"})
 
 
             return View();
