@@ -11,6 +11,21 @@ namespace LearnHighCharts.Web.Controllers
         // GET: ChartSample
         public ActionResult Index()
         {
+            //The chart class only accepts arrays
+
+            //Create a collection of data for our chart
+
+            List<DataModel.TransactionCount> transactions = new List<DataModel.TransactionCount> {
+                new DataModel.TransactionCount() { MonthName="Jan", Count=30 },
+                new DataModel.TransactionCount() {MonthName = "Feb",Count=40 },
+                new DataModel.TransactionCount() { MonthName = "Mar",Count=4},
+                new DataModel.TransactionCount() { MonthName = "Apr",Count = 35 },
+                new DataModel.TransactionCount() { MonthName = "May",Count= 22}
+
+            };
+
+
+
             return View();
         }
     }
