@@ -45,7 +45,14 @@ namespace LearnHighCharts.Web.Controllers
                .SetTooltip(new Tooltip {  Enabled=true,
                Formatter = @"function(){return '<b>' + this.series.name + '</b><br/>' + this.x +': '+ this.y; }"
                })
-
+               .SetPlotOptions(new PlotOptions {
+                   Line =new PlotOptionsLine {
+                       DataLabels = new PlotOptionsLineDataLabels {
+                           Enabled =true
+                       },
+                       EnableMouseTracking =false
+                   }
+               })
 
 
             return View();
