@@ -41,7 +41,12 @@ namespace LearnHighCharts.Web.Controllers
                //load x values
                .SetXAxis(new XAxis { Categories = xDataMonths })
                //set Y Title
-               .SetYAxis(new YAxis {  Title=new YAxisTitle {  Text= "Number of Transactions"} })
+               .SetYAxis(new YAxis { Title = new YAxisTitle { Text = "Number of Transactions" } })
+               .SetTooltip(new Tooltip {  Enabled=true,
+               Formatter = @"function(){return '<b>' + this.series.name + '</b><br/>' + this.x +': '+ this.y; }"
+               })
+
+
 
             return View();
         }
