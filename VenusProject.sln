@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Venus.DAL", "JunoProject.DA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataModel", "DataModel\DataModel.csproj", "{AA52F3CF-C567-439B-A6CA-9FDA3790651E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnHighCharts.Web", "LearnHighCharts.Web\LearnHighCharts.Web.csproj", "{77DE8E3D-EECB-4432-B508-C41B9045DBF7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{AA52F3CF-C567-439B-A6CA-9FDA3790651E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA52F3CF-C567-439B-A6CA-9FDA3790651E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA52F3CF-C567-439B-A6CA-9FDA3790651E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77DE8E3D-EECB-4432-B508-C41B9045DBF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77DE8E3D-EECB-4432-B508-C41B9045DBF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77DE8E3D-EECB-4432-B508-C41B9045DBF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77DE8E3D-EECB-4432-B508-C41B9045DBF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
