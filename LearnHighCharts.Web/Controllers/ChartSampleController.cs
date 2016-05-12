@@ -37,10 +37,11 @@ namespace LearnHighCharts.Web.Controllers
                //overall Title of Chart
                .SetTitle(new Title {  Text="Incoming Transactions per hour"})
                //small title below main title
-               .SetSubtitle(new Title {  Text="Accounting"})
+               .SetSubtitle(new Subtitle {  Text="Accounting"})
                //load x values
                .SetXAxis(new XAxis { Categories = xDataMonths })
-
+               //set Y Title
+               .SetYAxis(new YAxis {  Title=new YAxisTitle {  Text= "Number of Transactions"} })
 
             return View();
         }
