@@ -1,0 +1,6 @@
+C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\DataModel\bin\Debug\LabManager.sqlite
+C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\DataModel\bin\Debug\DataModel.dll
+C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\DataModel\bin\Debug\DataModel.pdb
+C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\DataModel\obj\Debug\DataModel.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\DataModel\obj\Debug\DataModel.dll
+C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\DataModel\obj\Debug\DataModel.pdb
