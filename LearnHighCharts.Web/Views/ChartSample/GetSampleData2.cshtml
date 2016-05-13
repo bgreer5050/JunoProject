@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewBag.Title = "GetSampleData2";
+}
+
+<h2>GetSampleData2</h2>
+
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="~/Scripts/Highcharts-4.0.1/js/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+<div id="container"></div>
+
+
+<script>
+
+
+    Start();
+
+    function Start()
+    {
+        $('#container').highcharts({
+
+            title: {
+                text: 'LEVEL',
+                x: 40 //center
+            },
+            subtitle: {
+                text: 'YOU',
+                x: -20
+            },
+
+
+            xAxis: {
+                categories: ['4', '4.5', '5', '5.5', '6', '6.5', '7', '7.5', '8', '8.5', '9', '9.5','10', '10.5', '11', '11.5', '12', '12.5', '13', '13.5', '14', '14.5', '15', '15.5', '16', '16.5', '17', '17.5', '18', '18.5', '19', '19.5', '20','20.5','21','21.5','22']
+            },
+
+
+            yAxis:{
+
+                title:{
+                    text:'LEVEL'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            }, //end y
+            series: [{
+                name: 'Ax',
+                data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+            }, {
+                name: 'Fr',
+                data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+            }, {
+                name: 'Dep',
+                data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+            }, {
+                name: 'Other',
+                data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+            }]
+        });
+
+   
+    }
+
+</script>

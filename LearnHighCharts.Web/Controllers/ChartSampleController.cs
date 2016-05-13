@@ -52,6 +52,7 @@ namespace LearnHighCharts.Web.Controllers
                {
                    Line = new PlotOptionsLine
                    {
+
                        DataLabels = new PlotOptionsLineDataLabels
                        {
                            Enabled = true
@@ -70,6 +71,49 @@ namespace LearnHighCharts.Web.Controllers
 
 
             return View(chart);
+        }
+
+
+        public ActionResult ChartByAjax()
+        {
+            return View();
+        }
+
+
+        public ActionResult GetSampleData1()
+        {
+
+            List<Anx> mylist = new List<Anx>();
+
+
+            Anx a = new Anx();
+            a.name = "7";
+
+            var list = new List<double?>();
+            list.Add(3.2);
+            list.Add(2.2);
+            list.Add(1.2);
+            list.Add(4.2);
+            list.Add(2.2);
+            list.Add(1.2);
+
+            a.data = list;
+
+            return Json(a,JsonRequestBehavior.AllowGet);
+
+        }
+
+
+
+        public ActionResult GetSampleData2()
+        {
+            return View();
+        }
+
+        public class Anx
+        {
+            public string name { get; set; }
+            public List<double?> data { get; set; }
         }
     }
 }
