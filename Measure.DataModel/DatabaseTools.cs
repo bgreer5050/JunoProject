@@ -19,7 +19,7 @@ namespace Measure.DataModel
             get {
                 if(_sqlConn == null)
                 {
-                    _sqlConn = new SQLiteConnection("Data Source = MyDatabase.sqlite; version = 3;");
+                    _sqlConn = new SQLiteConnection("Data Source = MyDatabase2.sqlite; version = 3;");
                 }
                 return _sqlConn;
             }
