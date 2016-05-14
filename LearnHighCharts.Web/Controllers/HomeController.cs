@@ -10,7 +10,7 @@ namespace LearnHighCharts.Web.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+         return   RedirectToAction("GetSampleData3","ChartSample");
         }
 
         public ActionResult About()

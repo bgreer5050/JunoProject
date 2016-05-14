@@ -20,7 +20,7 @@ namespace LearnHighCharts.Web.Controllers
             //Create a collection of data for our chart
 
 
-            RedirectToAction("GetSampleData3");
+           
 
             List<DataModel.TransactionCount> transactions = new List<DataModel.TransactionCount> {
                 new DataModel.TransactionCount() { MonthName="Jan", Count=30 },
@@ -134,6 +134,12 @@ namespace LearnHighCharts.Web.Controllers
             Series serFr = new Series();
             Series serDep = new Series();
 
+
+            serAX.Name = "Anxiety";
+            serDep.Name = "Depression";
+            serFr.Name = "Fear";
+
+
             Data axData = new Data(new object[records.Count]);
             Data fearData = new Data(new object[records.Count]);
             Data depData = new Data(new object[records.Count]);
@@ -150,19 +156,26 @@ namespace LearnHighCharts.Web.Controllers
             }
 
             serAX.Data = axData;
+            serDep.Data = depData;
+            serFr.Data = fearData;
+
+            //Create a series array
+            Series[] allSeries = new Series[3];
+            allSeries[0] = serAX;
+            allSeries[1] = serDep;
+            allSeries[2] = serFr;
 
             xaxis.Categories = strCategories.ToArray();
             xaxis.Type = AxisTypes.Datetime;
             chart.SetXAxis(xaxis);
 
 
-            Series s = new Series();
-            s.Data = new Data(new object[] { 1, 2, 3, 4, 5, 6 });
+          
 
 
             
 
-            chart.SetSeries(serAX);
+            chart.SetSeries(allSeries);
             
             //Series[] series = new Series[4];
            
