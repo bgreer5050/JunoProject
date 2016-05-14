@@ -309,6 +309,7 @@
     <Content Include="Views\ChartSample\Index.cshtml" />
     <Content Include="Views\ChartSample\ChartByAjax.cshtml" />
     <Content Include="Views\ChartSample\GetSampleData2.cshtml" />
+    <Content Include="Views\ChartSample\GetSampleData3.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

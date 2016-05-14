@@ -19,6 +19,9 @@ namespace LearnHighCharts.Web.Controllers
 
             //Create a collection of data for our chart
 
+
+            RedirectToAction("GetSampleData3");
+
             List<DataModel.TransactionCount> transactions = new List<DataModel.TransactionCount> {
                 new DataModel.TransactionCount() { MonthName="Jan", Count=30 },
                 new DataModel.TransactionCount() {MonthName = "Feb",Count=40 },
@@ -80,28 +83,28 @@ namespace LearnHighCharts.Web.Controllers
         }
 
 
-        public ActionResult GetSampleData1()
-        {
+        //public ActionResult GetSampleData1()
+        //{
 
-            List<Anx> mylist = new List<Anx>();
+        //    List<Anx> mylist = new List<Anx>();
 
 
-            Anx a = new Anx();
-            a.name = "7";
+        //    Anx a = new Anx();
+        //    a.name = "7";
 
-            var list = new List<double?>();
-            list.Add(3.2);
-            list.Add(2.2);
-            list.Add(1.2);
-            list.Add(4.2);
-            list.Add(2.2);
-            list.Add(1.2);
+        //    var list = new List<double?>();
+        //    list.Add(3.2);
+        //    list.Add(2.2);
+        //    list.Add(1.2);
+        //    list.Add(4.2);
+        //    list.Add(2.2);
+        //    list.Add(1.2);
 
-            a.data = list;
+        //    a.data = list;
 
-            return Json(a,JsonRequestBehavior.AllowGet);
+        //    return Json(a,JsonRequestBehavior.AllowGet);
 
-        }
+        //}
 
 
 
@@ -110,10 +113,95 @@ namespace LearnHighCharts.Web.Controllers
             return View();
         }
 
-        public class Anx
+
+
+        public ActionResult GetSampleData3()
         {
-            public string name { get; set; }
-            public List<double?> data { get; set; }
+            List<Record> records = Record.GetMockSet();
+
+
+            DotNet.Highcharts.Highcharts chart = new Highcharts("chart");
+            chart.SetTitle(new Title { Text = "My Chart" });
+            XAxis xaxis = new XAxis();
+            xaxis.Title = new XAxisTitle { Text = @"Date / Time", Enabled = "true" };
+           
+
+            //Create a List to hold our categories and convert it to an array and assign it to categories
+            List<string> strCategories = new List<string>();
+
+
+            Series serAX = new Series(); //Each Series will need a Data object which holds an array of objects with values (data points)
+            Series serFr = new Series();
+            Series serDep = new Series();
+
+            Data axData = new Data(new object[records.Count]);
+            Data fearData = new Data(new object[records.Count]);
+            Data depData = new Data(new object[records.Count]);
+
+            int counter = 0;
+            foreach (var rec in records)
+            {
+                strCategories.Add(rec.DateTime.ToString());
+                axData.ArrayData[counter] = rec.Anxiety;
+                fearData.ArrayData[counter] = rec.Fear;
+                depData.ArrayData[counter] = rec.Depression;
+
+                counter += 1;
+            }
+
+            serAX.Data = axData;
+
+            xaxis.Categories = strCategories.ToArray();
+            chart.SetXAxis(xaxis);
+
+
+            Series s = new Series();
+            s.Data = new Data(new object[] { 1, 2, 3, 4, 5, 6 });
+
+
+            
+
+            chart.SetSeries(s);
+            
+            //Series[] series = new Series[4];
+           
+
+
+            return View(chart);
+        }
+
+        public class Record
+        {
+
+            public string DateTime { get; set; }
+            public decimal Anxiety { get; set; }
+            public decimal Fear { get; set; }
+            public decimal Depression { get; set; }
+
+            public static List<Record> GetMockSet()
+            {
+
+                var records = new List<Record>();
+
+                DateTime dt = new System.DateTime(2016, 5, 1, 0, 0, 0);
+
+                for(var x = 0m; x < 24.0m; x +=.25m)
+                {
+                    var record = new Record { Anxiety = GetRandomNumber(), Depression = GetRandomNumber(), Fear = GetRandomNumber(), DateTime = dt.Date.TimeOfDay.ToString()};
+                    records.Add(record);
+                    dt = dt.AddMinutes(15.0d);
+                }
+                return records;
+            }
+
+            private static decimal GetRandomNumber()
+            {
+                System.Random rnd = new Random();
+                int result = rnd.Next(0, 50);
+                decimal decResult = decimal.Parse((result / 10.0).ToString());
+                return decResult;
+            }
+
         }
     }
 }
