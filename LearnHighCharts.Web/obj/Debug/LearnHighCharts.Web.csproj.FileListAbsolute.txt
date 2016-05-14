@@ -85,3 +85,5 @@ C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\LearnHighCharts
 C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\LearnHighCharts.Web\bin\System.Data.SQLite.EF6.dll
 C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\LearnHighCharts.Web\bin\System.Data.SQLite.Linq.dll
 C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\LearnHighCharts.Web\bin\System.Data.SQLite.xml
+C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\LearnHighCharts.Web\bin\Measure.DataModel.dll
+C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\LearnHighCharts.Web\bin\Measure.DataModel.pdb

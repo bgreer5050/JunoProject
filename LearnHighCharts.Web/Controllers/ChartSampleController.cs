@@ -2,6 +2,7 @@
 using DotNet.Highcharts.Enums;
 using DotNet.Highcharts.Helpers;
 using DotNet.Highcharts.Options;
+using Measure.DataModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;

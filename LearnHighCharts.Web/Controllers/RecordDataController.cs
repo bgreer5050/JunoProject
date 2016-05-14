@@ -30,7 +30,7 @@ namespace LearnHighCharts.Web.Controllers
         public int InsertRecord()
         {
 
-            SQLiteConnection conn = new SQLiteConnection()
+            //SQLiteConnection conn = new SQLiteConnection()
             return 0;
         }
     }
