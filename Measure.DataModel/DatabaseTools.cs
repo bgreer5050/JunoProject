@@ -41,7 +41,7 @@ namespace Measure.DataModel
                 SQLiteConnection.CreateFile("MyDatabase2.sqlite");
 
 
-                string strCommandText = "CREATE TABLE records (Anxiety REAL, Fear REAL, Depression REAL, DateTime TEXT)";
+                string strCommandText = "CREATE TABLE records (Id INTEGER PRIMARY KEY AUTOINCREMENT  NOT NULL  UNIQUE, Anxiety REAL, Fear REAL, Depression REAL, DateTime TEXT)";
 
                 
                 SQLiteCommand cmd = new SQLiteCommand(strCommandText, this.SQLiteConnection);
@@ -55,3 +55,9 @@ namespace Measure.DataModel
        
     }
 }
+
+
+
+
+
+//CREATE TABLE "main"."records2" ("Id" INTEGER PRIMARY KEY AUTOINCREMENT  NOT NULL  UNIQUE , "Anxiety" FLOAT NOT NULL , "Fear" FLOAT NOT NULL , "Depression" FLOAT NOT NULL , "DateTime" TEXT NOT NULL )
