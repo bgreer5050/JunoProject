@@ -203,6 +203,7 @@
     <Compile Include="Controllers\ChartSampleController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RecordDataController.cs" />
     <Compile Include="DataModel\TransactionCount.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -228,6 +229,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\DataTables\DataTables.js" />
     <Content Include="Scripts\Highcharts-4.0.1\js\adapters\standalone-framework.js" />
     <Content Include="Scripts\Highcharts-4.0.1\js\adapters\standalone-framework.src.js" />
     <Content Include="Scripts\Highcharts-4.0.1\js\highcharts-3d.js" />
@@ -261,6 +263,7 @@
     <Content Include="Scripts\Highcharts-4.0.1\js\themes\grid.js" />
     <Content Include="Scripts\Highcharts-4.0.1\js\themes\sand-signika.js" />
     <Content Include="Scripts\Highcharts-4.0.1\js\themes\skies.js" />
+    <Content Include="Scripts\JEditable\jeditable.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -310,6 +313,9 @@
     <Content Include="Views\ChartSample\ChartByAjax.cshtml" />
     <Content Include="Views\ChartSample\GetSampleData2.cshtml" />
     <Content Include="Views\ChartSample\GetSampleData3.cshtml" />
+    <Content Include="Views\RecordData\Index.cshtml" />
+    <Content Include="Views\RecordData\Index2.cshtml" />
+    <Content Include="Views\RecordData\Index3.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

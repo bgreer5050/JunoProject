@@ -166,7 +166,7 @@ namespace LearnHighCharts.Web.Controllers
             allSeries[2] = serFr;
 
             xaxis.Categories = strCategories.ToArray();
-            xaxis.Type = AxisTypes.Datetime;
+            
             chart.SetXAxis(xaxis);
 
 
@@ -202,7 +202,7 @@ namespace LearnHighCharts.Web.Controllers
 
                 for(var x = 0m; x < 24.0m; x +=.25m)
                 {
-                    var record = new Record { Anxiety = GetRandomNumber(rnd), Depression = GetRandomNumber(rnd), Fear = GetRandomNumber(rnd), DateTime = dt.Date.TimeOfDay.ToString()};
+                    var record = new Record { Anxiety = GetRandomNumber(rnd), Depression = GetRandomNumber(rnd), Fear = GetRandomNumber(rnd), DateTime = dt.TimeOfDay.ToString()};
                     records.Add(record);
                     dt = dt.AddMinutes(15.0d);
                 }
