@@ -33,7 +33,13 @@ namespace Measure.DataModel
 
                 DateTime dt = DateTime.Parse(reader.GetString(4));
 
-                Record _rec = new Record { Anxiety = reader.GetInt32(1), Fear = reader.GetInt32(2), Depression = reader.GetInt32(3), DateTime = reader.GetString(4) };
+                Record _rec = new Record();//
+                _rec.Anxiety = reader.GetDecimal(1);
+                _rec.Fear = reader.GetDecimal(2);
+                _rec.Depression = reader.GetDecimal(3);
+                _rec.DateTime = reader.GetString(4);
+
+                //{ Anxiety = reader.GetInt32(1), Fear = reader.GetInt32(2), Depression = reader.GetInt32(3), DateTime = reader.GetString(4) };
                 _records.Add(_rec);
             }
 

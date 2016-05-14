@@ -15,7 +15,11 @@ namespace Measure.Console
 
             foreach(var rec in repo.GetAllRecords())
             {
-                System.Console.Write("Time: {3} Anxiety: {0} Fear: {1} Depression: {2}", rec.Anxiety, rec.Fear, rec.Depression, rec.DateTime);
+                //System.Console.Write("Time: {3} Anxiety: {0} Fear: {1} Depression: {2}", rec.Anxiety, rec.Fear, rec.Depression, rec.DateTime);
+                System.Console.WriteLine(rec.Anxiety);
+                System.Console.WriteLine(rec.Fear);
+                System.Console.WriteLine(rec.Depression);
+                System.Console.WriteLine(rec.DateTime);
             }
 
             System.Console.ReadLine();
