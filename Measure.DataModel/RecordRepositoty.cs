@@ -11,8 +11,10 @@ namespace Measure.DataModel
     {
 
 
-        public void GetAllRecords()
+        public List<Record> GetAllRecords()
         {
+            List<Record> _records = new List<Record>();
+
             DatabaseTools dbTools = new DatabaseTools();
             SQLiteConnection conn = dbTools.SQLiteConnection;
             string strCommandText = "SELECT * FROM records;";
@@ -31,12 +33,18 @@ namespace Measure.DataModel
 
                 DateTime dt = DateTime.Parse(reader.GetString(4));
 
-
+                Record _rec = new Record { Anxiety = reader.GetInt32(1), Fear = reader.GetInt32(2), Depression = reader.GetInt32(3), DateTime = reader.GetString(4) };
+                _records.Add(_rec);
             }
 
             conn.Close();
 
+            return _records;
         }
+
+
+
+       
 
     }
 }

@@ -12,6 +12,13 @@ namespace Measure.Console
         {
             DataModel.RecordRepositoty repo = new DataModel.RecordRepositoty();
             repo.GetAllRecords();
+
+            foreach(var rec in repo.GetAllRecords())
+            {
+                System.Console.Write("Time: {3} Anxiety: {0} Fear: {1} Depression: {2}", rec.Anxiety, rec.Fear, rec.Depression, rec.DateTime);
+            }
+
+            System.Console.ReadLine();
         }
     }
 }
