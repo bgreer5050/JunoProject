@@ -152,6 +152,7 @@ namespace LearnHighCharts.Web.Controllers
             serAX.Data = axData;
 
             xaxis.Categories = strCategories.ToArray();
+            xaxis.Type = AxisTypes.Datetime;
             chart.SetXAxis(xaxis);
 
 
@@ -161,7 +162,7 @@ namespace LearnHighCharts.Web.Controllers
 
             
 
-            chart.SetSeries(s);
+            chart.SetSeries(serAX);
             
             //Series[] series = new Series[4];
            
@@ -180,6 +181,7 @@ namespace LearnHighCharts.Web.Controllers
 
             public static List<Record> GetMockSet()
             {
+                System.Random rnd = new Random();
 
                 var records = new List<Record>();
 
@@ -187,16 +189,15 @@ namespace LearnHighCharts.Web.Controllers
 
                 for(var x = 0m; x < 24.0m; x +=.25m)
                 {
-                    var record = new Record { Anxiety = GetRandomNumber(), Depression = GetRandomNumber(), Fear = GetRandomNumber(), DateTime = dt.Date.TimeOfDay.ToString()};
+                    var record = new Record { Anxiety = GetRandomNumber(rnd), Depression = GetRandomNumber(rnd), Fear = GetRandomNumber(rnd), DateTime = dt.Date.TimeOfDay.ToString()};
                     records.Add(record);
                     dt = dt.AddMinutes(15.0d);
                 }
                 return records;
             }
 
-            private static decimal GetRandomNumber()
+            private static decimal GetRandomNumber(System.Random rnd)
             {
-                System.Random rnd = new Random();
                 int result = rnd.Next(0, 50);
                 decimal decResult = decimal.Parse((result / 10.0).ToString());
                 return decResult;
