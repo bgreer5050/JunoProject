@@ -184,38 +184,38 @@ namespace LearnHighCharts.Web.Controllers
             return View(chart);
         }
 
-        public class Record
-        {
+        //public class Record
+        //{
 
-            public string DateTime { get; set; }
-            public decimal Anxiety { get; set; }
-            public decimal Fear { get; set; }
-            public decimal Depression { get; set; }
+        //    public string DateTime { get; set; }
+        //    public decimal Anxiety { get; set; }
+        //    public decimal Fear { get; set; }
+        //    public decimal Depression { get; set; }
 
-            public static List<Record> GetMockSet()
-            {
-                System.Random rnd = new Random();
+        //    public static List<Record> GetMockSet()
+        //    {
+        //        System.Random rnd = new Random();
 
-                var records = new List<Record>();
+        //        var records = new List<Record>();
 
-                DateTime dt = new System.DateTime(2016, 5, 1, 0, 0, 0);
+        //        DateTime dt = new System.DateTime(2016, 5, 1, 0, 0, 0);
 
-                for(var x = 0m; x < 24.0m; x +=.25m)
-                {
-                    var record = new Record { Anxiety = GetRandomNumber(rnd), Depression = GetRandomNumber(rnd), Fear = GetRandomNumber(rnd), DateTime = dt.TimeOfDay.ToString()};
-                    records.Add(record);
-                    dt = dt.AddMinutes(15.0d);
-                }
-                return records;
-            }
+        //        for(var x = 0m; x < 24.0m; x +=.25m)
+        //        {
+        //            var record = new Record { Anxiety = GetRandomNumber(rnd), Depression = GetRandomNumber(rnd), Fear = GetRandomNumber(rnd), DateTime = dt.TimeOfDay.ToString()};
+        //            records.Add(record);
+        //            dt = dt.AddMinutes(15.0d);
+        //        }
+        //        return records;
+        //    }
 
-            private static decimal GetRandomNumber(System.Random rnd)
-            {
-                int result = rnd.Next(0, 50);
-                decimal decResult = decimal.Parse((result / 10.0).ToString());
-                return decResult;
-            }
+        //    private static decimal GetRandomNumber(System.Random rnd)
+        //    {
+        //        int result = rnd.Next(0, 50);
+        //        decimal decResult = decimal.Parse((result / 10.0).ToString());
+        //        return decResult;
+        //    }
 
-        }
+        //}
     }
 }

@@ -81,3 +81,7 @@ C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\LearnHighCharts
 C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\LearnHighCharts.Web\obj\Debug\LearnHighCharts.Web.csprojResolveAssemblyReference.cache
 C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\LearnHighCharts.Web\obj\Debug\LearnHighCharts.Web.dll
 C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\LearnHighCharts.Web\obj\Debug\LearnHighCharts.Web.pdb
+C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\LearnHighCharts.Web\bin\System.Data.SQLite.dll
+C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\LearnHighCharts.Web\bin\System.Data.SQLite.EF6.dll
+C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\LearnHighCharts.Web\bin\System.Data.SQLite.Linq.dll
+C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\LearnHighCharts.Web\bin\System.Data.SQLite.xml
