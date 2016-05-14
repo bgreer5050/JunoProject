@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 
 using System.Data.SQLite;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Web;
@@ -16,7 +17,15 @@ namespace LearnHighCharts.Web
         protected void Application_Start()
         {
 
-            SetUpDatabase();
+            //Debug.WriteLine(Environment.CurrentDirectory);
+            //Debug.WriteLine(Environment.SpecialFolder.ApplicationData);
+            //Debug.WriteLine(Environment.SpecialFolder.CommonApplicationData);
+            //Debug.WriteLine(Environment.SpecialFolder.Resources);
+
+
+            Measure.DataModel.DatabaseTools.SetUpDatabase();
+
+
 
             var fileName = Path.Combine(Environment.CurrentDirectory, "MyDatabase.sqlite");
 
@@ -27,7 +36,7 @@ namespace LearnHighCharts.Web
             else
             {
                 System.IO.File.Create(fileName);
-                SetUpDatabase();
+                Measure.DataModel.DatabaseTools.SetUpDatabase();
             }
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
@@ -35,19 +44,6 @@ namespace LearnHighCharts.Web
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
 
-        private void SetUpDatabase()
-        {
-
-            System.Data.SQLite.SQLiteConnection.CreateFile("MyDatabase.sqlite");
-
-            System.Data.SQLite.SQLiteConnection conn = new System.Data.SQLite.SQLiteConnection("Data Source = MyDatabase.sqlite; Version = 3;");
-
-            string strCommandText = "CREATE TABLE records (Anxiety REAL, Fear REAL, Depression REAL, DateTime TEXT)";
-            SQLiteCommand cmd = new SQLiteCommand(strCommandText, conn);
-            conn.Open();
-            cmd.ExecuteNonQuery();
-            conn.Close();
-
-        }
+       
     }
 }

@@ -1,0 +1,14 @@
+C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\Measure.DataModel\bin\Debug\Measure.DataModel.dll.config
+C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\Measure.DataModel\bin\Debug\Measure.DataModel.dll
+C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\Measure.DataModel\bin\Debug\Measure.DataModel.pdb
+C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\Measure.DataModel\bin\Debug\EntityFramework.dll
+C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\Measure.DataModel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\Measure.DataModel\bin\Debug\System.Data.SQLite.dll
+C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\Measure.DataModel\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\Measure.DataModel\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\Measure.DataModel\bin\Debug\EntityFramework.xml
+C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\Measure.DataModel\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\Measure.DataModel\bin\Debug\System.Data.SQLite.xml
+C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\Measure.DataModel\obj\Debug\Measure.DataModel.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\Measure.DataModel\obj\Debug\Measure.DataModel.dll
+C:\Users\admin\Documents\Visual Studio 2015\Projects\JunoProject\Measure.DataModel\obj\Debug\Measure.DataModel.pdb
