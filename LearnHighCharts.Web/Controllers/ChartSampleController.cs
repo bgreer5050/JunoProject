@@ -125,7 +125,7 @@ namespace LearnHighCharts.Web.Controllers
             chart.SetTitle(new Title { Text = "My Chart" });
             XAxis xaxis = new XAxis();
             xaxis.Title = new XAxisTitle { Text = @"Date / Time", Enabled = "true" };
-           
+            
 
             //Create a List to hold our categories and convert it to an array and assign it to categories
             List<string> strCategories = new List<string>();
@@ -136,9 +136,9 @@ namespace LearnHighCharts.Web.Controllers
             Series serDep = new Series();
 
 
-            serAX.Name = "Anxiety";
-            serDep.Name = "Depression";
-            serFr.Name = "Fear";
+            serAX.Name = "A";
+            serDep.Name = "D";
+            serFr.Name = "F";
 
 
             Data axData = new Data(new object[records.Count]);

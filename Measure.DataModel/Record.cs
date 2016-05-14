@@ -23,7 +23,7 @@ namespace Measure.DataModel
 
             for (var x = 0m; x < 24.0m; x += .25m)
             {
-                var record = new Record { Anxiety = GetRandomNumber(rnd), Depression = GetRandomNumber(rnd), Fear = GetRandomNumber(rnd), DateTime = dt.TimeOfDay.ToString() };
+                var record = new Record { Anxiety = GetRandomNumber(rnd), Depression = GetRandomNumber(rnd), Fear = GetRandomNumber(rnd), DateTime = dt.TimeOfDay.Hours.ToString() };
                 records.Add(record);
                 dt = dt.AddMinutes(15.0d);
             }

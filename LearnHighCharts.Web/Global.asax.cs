@@ -23,21 +23,12 @@ namespace LearnHighCharts.Web
             //Debug.WriteLine(Environment.SpecialFolder.Resources);
 
 
-            Measure.DataModel.DatabaseTools.SetUpDatabase();
+            Measure.DataModel.DatabaseTools dbTools = new Measure.DataModel.DatabaseTools();
+            dbTools.SetUpDatabase();
 
 
 
-            var fileName = Path.Combine(Environment.CurrentDirectory, "MyDatabase.sqlite");
 
-            if (System.IO.File.Exists(fileName))
-            {
-
-            }
-            else
-            {
-                System.IO.File.Create(fileName);
-                Measure.DataModel.DatabaseTools.SetUpDatabase();
-            }
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
